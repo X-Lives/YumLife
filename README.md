@@ -1,8 +1,8 @@
 # X-Lives/Yumlife
 ## Language - 语言 - 語言
-- [English](https://github.com/X-Lives/YumLife/edit/master/README.md#english)
-- [简体中文](https://github.com/X-Lives/YumLife/edit/master/README.md#%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
-- 正體中文
+- [English](https://github.com/X-Lives/YumLife?tab=readme-ov-file#english)
+- [简体中文](https://github.com/X-Lives/YumLife#%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
+- ~~正體中文~~(正在施工...)
 
 ---
 ### English
