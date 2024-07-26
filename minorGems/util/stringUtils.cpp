@@ -388,7 +388,7 @@ SimpleVector<char *> *tokenizeString( const char *inString ) {
     
     while( i < len ) {
         
-        char nextChar = tempString[i];
+        unsigned char nextChar = tempString[i];
         
         int tokenLen = 0;
         char *tokenStart = &( tempString[i] );
@@ -400,7 +400,7 @@ SimpleVector<char *> *tokenizeString( const char *inString ) {
         // this provides a slight speedup
         while( nextChar > ' ' ) {
             i++;
-            tokenLen ++;
+            tokenLen++;
             nextChar = tempString[i];
             }
         // found one of our token separators
@@ -448,7 +448,7 @@ SimpleVector<char *> *tokenizeStringInPlace( char *inString ) {
     
     while( i < len ) {
         
-        char nextChar = inString[i];
+        unsigned char nextChar = inString[i];
         
         int tokenLen = 0;
         char *tokenStart = &( inString[i] );
@@ -460,7 +460,7 @@ SimpleVector<char *> *tokenizeStringInPlace( char *inString ) {
         // this provides a slight speedup
         while( nextChar > ' ' ) {
             i++;
-            tokenLen ++;
+            tokenLen++;
             nextChar = inString[i];
             }
         // found one of our token separators
