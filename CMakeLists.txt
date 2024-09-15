@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 
-project(YumLife)
+project(YumLife_Unicode)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -175,9 +175,12 @@ if(WIN32)
         message(FATAL_ERROR "SDL directory not found: ${SDL_DIR}")
     endif()
 
+    set(FT_DIR "freetype-2.13.2")
+    include_directories("${FT_DIR}/include")
+
     add_executable(YumLife_windows ${CLIENT_SOURCE_FILES} ${MINORGEMS_SOURCE_FILES} icon.rc)
     target_compile_options(YumLife_windows PRIVATE ${CLIENT_COMPILE_OPTIONS})
-    target_link_libraries(YumLife_windows opengl32 glu32 mingw32 SDLmain SDL wsock32 winmm)
+    target_link_libraries(YumLife_windows opengl32 glu32 mingw32 SDLmain SDL wsock32 winmm freetype)
     target_link_options(YumLife_windows PRIVATE -mwindows -static-libstdc++ -static-libgcc)
 else()
     add_definitions(-DLINUX)
